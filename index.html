@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultant | Red Sea Associates | Kuala Lumpur</title>
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <script src="cdn.tailwind.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    #splash-screen {
+      background-color: #B91C1C;
+      position: fixed;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      z-index: 9999;
+      transition: opacity 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    #splash-screen.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #splash-screen.hide {
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    #home {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/img/bg-main.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    #about {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('./assets/img/consultant.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #contact {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('./assets/img/consultant-1.png');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+  <div id="splash-screen">
+    <img width="150" src="assets/img/red-sea-logo-2.jpg" alt="Red Sea Associates">
+  </div>
+
+  <nav id="navbar"
+    class="text-white px-3 fixed top-0 right-0 left-0 bg-transparent lg:flex lg:items-center lg:justify-between transition duration-500 z-[999]">
+    <div class="flex justify-between items-center">
+      <span class="text-sm lg:text-xl cursor-pointer font-bold">
+        <img class="h-14 lg:h-24 inline mt-2" src="assets/img/Red_Sea_Logo.png">
+        <span class="lg:ml-[-10px]">RED SEA ASSOCIATES</span>
+      </span>
+
+      <span class="text-3xl cursor-pointer mt-1 mx-2 lg:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+    <ul
+      class="text-center z-[-1] py-4 opacity-0 top-[-400px] absolute w-full left-0  lg:flex lg:items-center lg:z-auto lg:static lg:w-auto lg:py-0 lg:pl-0 lg:opacity-100">
+      <li class="mx-4 my-6 lg:my-0">
+        <a href="#home" class="text-lg hover:text-orange-500 duration-500 inline-block w-full">HOME</a>
+      </li>
+      <li class="mx-4 my-6 lg:my-0">
+        <a href="#work" class="text-lg hover:text-orange-500 duration-500 inline-block w-full">WORK</a>
+      </li>
+      <li class="mx-4 my-6 lg:my-0">
+        <a href="#about" class="text-lg hover:text-orange-500 duration-500 inline-block w-full">ABOUT US</a>
+      </li>
+      <li class="mx-4 my-6 lg:my-0">
+        <a href="#services" class="text-lg hover:text-orange-500 duration-500 inline-block w-full">SERVICES</a>
+      </li>
+      <li class="mx-4 my-6 lg:my-0">
+        <a href="#clients" class="text-lg hover:text-orange-500 duration-500 inline-block w-full">CLIENTS</a>
+      </li>
+      <li class="mx-4 my-6 lg:my-0">
+        <a href="#contact" class="text-lg hover:text-orange-500 duration-500 inline-block w-full">CONTACT</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="home" class="h-screen text-white cursor-default">
+    <div class="flex justify-center items-center h-full">
+      <div class=" p-5">
+        <h1 class="text-4xl md:text-6xl md:border-b-2 font-semibold text-orange-500 uppercase">Making Connections
+        </h1>
+        <h1 class="text-3xl md:text-5xl font-semibold  md:text-left uppercase">Delivering Results</h1>
+        <h2 class="text-sm md:text-2xl mt-5">Rankings, Ratings, Reputation & Research Management</h2>
+      </div>
+      <div class="hidden p-5 md:block">
+        <img src="assets/img/red-sea-logo-2.jpg" alt="RedSea">
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="bg-white cursor-default px-5 md:px-20 py-28">
+    <div class="border lg:border-2 rounded border-neutral-700 mb-2 w-10 m-auto"></div>
+    <h1 data-aos="zoom-out" class="text-2xl lg:text-5xl font-semibold text-orange-500 text-center uppercase">Offer A
+      Wide Range Of Solutions
+    </h1>
+    <h3 data-aos="zoom-out" class="text-center my-12 text-base lg:text-xl font-medium">with the right methodology and
+      expertise to <br> help
+      grow and
+      sustain your
+      university
+      progress
+    </h3>
+    <div class="flex flex-col md:flex-row justify-center gap-10">
+      <div data-aos="zoom-out-up" class="p-2">
+        <div class="flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="blue" class="bi bi-hand-thumbs-up"
+            viewBox="0 0 16 16">
+            <path
+              d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+          </svg>
+        </div>
+        <p class="text-center my-6">We partner with our clients <br> from start to finish</p>
+      </div>
+      <div data-aos="zoom-out-up" class="p-2">
+        <div class="flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="orange" class="bi bi-lightbulb"
+            viewBox="0 0 16 16">
+            <path
+              d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1" />
+          </svg>
+        </div>
+        <p class="text-center my-6">Focusing on their needs <br> while producing new ideas</p>
+      </div>
+      <div data-aos="zoom-out-up" class="p-2">
+        <div class="flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="red" class="bi bi-puzzle"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H7a.5.5 0 0 1 .5.5v.382c0 .696-.497 1.182-.872 1.469a.5.5 0 0 0-.115.118l-.012.025L6.5 4.5v.003l.003.01q.005.015.036.053a.9.9 0 0 0 .27.194C7.09 4.9 7.51 5 8 5c.492 0 .912-.1 1.19-.24a.9.9 0 0 0 .271-.194.2.2 0 0 0 .039-.063v-.009l-.012-.025a.5.5 0 0 0-.115-.118c-.375-.287-.872-.773-.872-1.469V2.5A.5.5 0 0 1 9 2h2.395a1.5 1.5 0 0 1 1.493 1.645L12.645 6.5h.237c.195 0 .42-.147.675-.48.21-.274.528-.52.943-.52.568 0 .947.447 1.154.862C15.877 6.807 16 7.387 16 8s-.123 1.193-.346 1.638c-.207.415-.586.862-1.154.862-.415 0-.733-.246-.943-.52-.255-.333-.48-.48-.675-.48h-.237l.243 2.855A1.5 1.5 0 0 1 11.395 14H9a.5.5 0 0 1-.5-.5v-.382c0-.696.497-1.182.872-1.469a.5.5 0 0 0 .115-.118l.012-.025.001-.006v-.003a.2.2 0 0 0-.039-.064.9.9 0 0 0-.27-.193C8.91 11.1 8.49 11 8 11s-.912.1-1.19.24a.9.9 0 0 0-.271.194.2.2 0 0 0-.039.063v.003l.001.006.012.025c.016.027.05.068.115.118.375.287.872.773.872 1.469v.382a.5.5 0 0 1-.5.5H4.605a1.5 1.5 0 0 1-1.493-1.645L3.356 9.5h-.238c-.195 0-.42.147-.675.48-.21.274-.528.52-.943.52-.568 0-.947-.447-1.154-.862C.123 9.193 0 8.613 0 8s.123-1.193.346-1.638C.553 5.947.932 5.5 1.5 5.5c.415 0 .733.246.943.52.255.333.48.48.675.48h.238zM4.605 3a.5.5 0 0 0-.498.55l.001.007.29 3.4A.5.5 0 0 1 3.9 7.5h-.782c-.696 0-1.182-.497-1.469-.872a.5.5 0 0 0-.118-.115l-.025-.012L1.5 6.5h-.003a.2.2 0 0 0-.064.039.9.9 0 0 0-.193.27C1.1 7.09 1 7.51 1 8s.1.912.24 1.19c.07.14.14.225.194.271a.2.2 0 0 0 .063.039H1.5l.006-.001.025-.012a.5.5 0 0 0 .118-.115c.287-.375.773-.872 1.469-.872H3.9a.5.5 0 0 1 .498.542l-.29 3.408a.5.5 0 0 0 .497.55h1.878c-.048-.166-.195-.352-.463-.557-.274-.21-.52-.528-.52-.943 0-.568.447-.947.862-1.154C6.807 10.123 7.387 10 8 10s1.193.123 1.638.346c.415.207.862.586.862 1.154 0 .415-.246.733-.52.943-.268.205-.415.39-.463.557h1.878a.5.5 0 0 0 .498-.55l-.001-.007-.29-3.4A.5.5 0 0 1 12.1 8.5h.782c.696 0 1.182.497 1.469.872.05.065.091.099.118.115l.025.012.006.001h.003a.2.2 0 0 0 .064-.039.9.9 0 0 0 .193-.27c.14-.28.24-.7.24-1.191s-.1-.912-.24-1.19a.9.9 0 0 0-.194-.271.2.2 0 0 0-.063-.039H14.5l-.006.001-.025.012a.5.5 0 0 0-.118.115c-.287.375-.773.872-1.469.872H12.1a.5.5 0 0 1-.498-.543l.29-3.407a.5.5 0 0 0-.497-.55H9.517c.048.166.195.352.463.557.274.21.52.528.52.943 0 .568-.447.947-.862 1.154C9.193 5.877 8.613 6 8 6s-1.193-.123-1.638-.346C5.947 5.447 5.5 5.068 5.5 4.5c0-.415.246-.733.52-.943.268-.205.415-.39.463-.557z" />
+          </svg>
+        </div>
+        <p class="text-center my-6">Developing effective strategies <br> and designing high quality and <br> scalable
+          solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about"
+    class="cursor-default bg-neutral-500 text-white flex items-center flex-col justify-center text-justify px-9 md:px-20 py-28">
+    <div class="items-center flex-col lg:flex-row flex border-t-2 border-b-2 w-full p-4">
+      <div data-aos="fade-right" class="grow">
+        <h1 class="text-center text-3xl md:text-6xl font-bold text-orange-500">WHO WE ARE</h1>
+        <h1 class="text-center text-lg md:text-2xl font-medium">Discover Our Expertise</h1>
+      </div>
+      <div data-aos="fade-left" class="grow text-center flex justify-center items-center m-5">
+        <iframe class="md:w-[560px] md:h-[315px]"
+          src="https://video.wixstatic.com/video/a8b586_ac5c2aa9383b40359f9202b7b6a6f51e/720p/mp4/file.mp4"
+          frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <p data-aos="fade-up" class="my-5 text-sm lg:text-lg">At Red Sea Associates, we understand that change is not
+      always easy. We’ve been
+      helping
+      universities of all sizes
+      respond to global transitions in order to stay competitive and relevant in the both education and research niche.
+      Our
+      years of experience have taught us to always make your university ranking, reputation and research our priority.
+      <br><br>
+      Our team of experts is ready to help you develop strategies for not only surviving, but
+      thriving in the future.
+      Drop us
+      a mail today to set up your first consultation.
+    </p>
+  </section>
+
+  <section id="services" class="px-5 lg:px-20 pt-28 lg:py-28">
+    <div class="border lg:border-2 rounded border-neutral-700 mb-2 w-10 m-auto"></div>
+
+    <h1 data-aos="zoom-out" class="text-3xl lg:text-5xl font-semibold text-orange-500 text-center uppercase mt-3 mb-6">
+      Our Services</h1>
+
+    <div data-aos="fade-right" class="p-7 lg:p-16 rounded bg-emerald-100 border-t-2 border-emerald-300">
+      <svg class="mt-3 m-auto" preserveAspectRatio="xMidYMid meet" data-bbox="39 39 122.002 122.002"
+        viewBox="39 39 122.002 122.002" height="150" width="150" xmlns="http://www.w3.org/2000/svg" data-type="color"
+        role="presentation" aria-hidden="true">
+        <g>
+          <path fill="#35BED1"
+            d="M161.002 100.001c0 33.69-27.311 61.001-61.001 61.001S39 133.691 39 100.001 66.311 39 100.001 39s61.001 27.311 61.001 61.001z"
+            data-color="1"></path>
+          <path
+            d="M161 100.002c0-3.047-.294-6.017-.723-8.939l-24.876-14.457-69.968 49.238 54.591 31.725C143.862 149.273 161 126.663 161 100.002z"
+            opacity=".1"></path>
+          <path fill="#FFFFFF" d="M135.401 76.138H64.599v42.911l16.234 1.034 54.568-1.034V76.138z" data-color="2">
+          </path>
+          <path
+            d="M104.772 109.265c-.763-1.295-.279-3.02.215-4.186 1.277-1.161 2.265-2.753 2.824-4.601.15.198.314.319.499.319.569 0 1.023-1.103 1.023-2.451 0-1.353-.454-2.448-1.023-2.448-.015 0-.02.005-.03.005-.269-5.017-2.405-8.913-8.282-8.913-6.042 0-8.033 3.897-8.277 8.913-.015 0-.025-.005-.04-.005-.564 0-1.023 1.095-1.023 2.448 0 1.348.459 2.451 1.023 2.451.185 0 .349-.121.499-.326.559 1.855 1.552 3.446 2.834 4.607.499 1.166.978 2.891.209 4.186 0 0-13.047 4.736-13.047 10.2h35.648c0-5.463-13.052-10.199-13.052-10.199z"
+            fill="#005473" data-color="3"></path>
+          <path fill="#005473" d="M135.4 119.049v6.795H64.599v-6.795H135.4z" data-color="3"></path>
+          <path fill="#FFFFFF" d="M131.086 121.672v1.789H73.755v-1.789h57.331z" data-color="2"></path>
+          <path fill="#FFFFFF" d="M107.491 120.569v4.469h-.628v-4.469h.628z" data-color="2"></path>
+          <path fill="#FFFFFF" d="M71.674 122.565l-1.781 1.028-1.771 1.027v-4.115l1.771 1.035 1.781 1.025z"
+            data-color="2">
+          </path>
+        </g>
+      </svg>
+      <h1 class="font-semibold my-5 text-center text-base md:text-xl">SOLVING THE RANKINGS MYTH <br> IMPROVE YOUR
+        INDICATOR</h1>
+      <p class="text-justify text-sm md:text-center md:text-lg">We examine what universities are doing to stay relevant
+        and competitive
+        in this
+        fast-paced
+        world, and which
+        ones are
+        doing it best. Rankings by QS, THE, ARWU, UNS, Green Metrics etc are several agencies whom rank universities
+        based on
+        their respective indicators. We will help you to manage and improve respective indicators
+      </p>
+    </div>
+
+    <div data-aos="fade-left" class="p-7 lg:p-16 rounded my-10 bg-emerald-100 border-t-2 border-emerald-300">
+      <svg class="mt-3 m-auto" preserveAspectRatio="xMidYMid meet" data-bbox="39 38.998 122 122.004"
+        viewBox="39 38.998 122 122.004" height="150" width="150" xmlns="http://www.w3.org/2000/svg" data-type="color"
+        role="presentation" aria-hidden="true">
+        <g>
+          <path
+            d="M161 99.998c0 33.694-27.315 61.004-60.995 61.004-33.7 0-61.005-27.31-61.005-61.004 0-33.689 27.305-61 61.005-61 33.68 0 60.995 27.311 60.995 61z"
+            fill="#35BED1" data-color="1"></path>
+          <path
+            d="M161 99.998c0-2.32-.145-4.604-.393-6.857l-56.657-32.93 10.217 44.122L105 123l-5.667 1c2.386 0 3.833 3.323 3.833 6l3.833 1.5c0 2.678-4.447 2-6.833 2l-15.383 3.127c-.159 0-.314-.017-.478-.032 12.004 6.979 24.007 13.95 36.011 20.925C144.015 149.15 161 126.564 161 99.998z"
+            opacity=".13"></path>
+          <path
+            d="M103.81 59.971h-1.758v40.013h-.02v.108a4.917 4.917 0 0 1 3.895 4.805 4.917 4.917 0 0 1-4.921 4.913 4.91 4.91 0 0 1-4.906-4.913 4.907 4.907 0 0 1 3.87-4.8V59.971h-1.818l-24.645 44.35 12.009 20.486h30.936l12.058-20.268-24.7-44.568z"
+            fill="#FFFFFF" data-color="2"></path>
+          <path
+            d="M121.547 129.477c0-2.677-1.932-4.847-4.318-4.847H84.784c-2.381 0-4.313 2.17-4.313 4.847v2.303c0 2.678 1.933 4.847 4.313 4.847h32.445c2.386 0 4.318-2.169 4.318-4.847v-2.303z"
+            fill="#00658A" data-color="3"></path>
+        </g>
+      </svg>
+      <h1 class="font-semibold my-5 text-center text-base md:text-xl uppercase">Unlocking Excellence & Redefining
+        Rankings</h1>
+      <p class="text-justify text-sm md:text-center md:text-lg">With years of experience, our staff has the capabilities
+        and expertise to take
+        your
+        university to the next level. At Red
+        Sea Associates Universities Ranking Strategy Consultants, we combine our insights and skills to transform your
+        processes
+        and strategies, to improve reputation among your peers and stakeholders</p>
+    </div>
+
+    <div data-aos="fade-right" class="p-7 lg:p-16 rounded bg-emerald-100 border-t-2 border-emerald-300">
+      <svg class="mt-3 m-auto" preserveAspectRatio="xMidYMid meet" data-bbox="39.001 38.997 122 122.006"
+        viewBox="39.001 38.997 122 122.006" height="150" width="150" xmlns="http://www.w3.org/2000/svg"
+        data-type="color" role="presentation" aria-hidden="true">
+        <g>
+          <path fill="#FF8969"
+            d="M161.001 100c0 33.691-27.31 61.003-61 61.003s-61-27.312-61-61.003 27.31-61.003 61-61.003 61 27.312 61 61.003z"
+            data-color="1"></path>
+          <path
+            d="M161 100c0-5.643-.828-11.08-2.255-16.266l-25.12-14.597-72.592 52.614 60.618 35.221C144.631 148.231 161 126.053 161 100z"
+            opacity=".1"></path>
+          <path fill="#00658A" d="M98.81 71.413v50.338H60.573V71.413H98.81z" data-color="2"></path>
+          <path fill="#00658A" d="M137.047 71.413v50.338H98.81V71.413h38.237z" data-color="2"></path>
+          <path fill="#00658A"
+            d="M103.689 121.349c0 1.532-2.236 2.774-4.994 2.774-2.758 0-4.994-1.242-4.994-2.774s2.236-2.774 4.994-2.774c2.758 0 4.994 1.242 4.994 2.774z"
+            data-color="2"></path>
+          <path fill="#A9E1E9" d="M98.81 68.811H64.001v49.765h69.624V68.811H98.81z" data-color="3"></path>
+          <path opacity=".05" d="M133.624 68.811v49.765H98.81V68.811h34.814z"></path>
+          <path
+            d="M106.773 110.432v-3.903a3.906 3.906 0 0 1 3.897 3.903v7.461h.868v-20.29c0-1.081.878-1.962 1.966-1.962a1.97 1.97 0 0 1 1.97 1.962v14.336l.918.089v-6.087c0-1.168.883-2.044 1.966-2.044 1.087 0 1.97.877 1.97 1.96v6.083h.913v-6.083c0-1.083.883-1.96 1.97-1.96 1.088 0 1.961.877 1.961 1.96v6.083h.933v-4.708a1.96 1.96 0 0 1 1.961-1.96c1.088 0 1.966.878 1.966 1.96v12.542a9.206 9.206 0 0 1-2.46 6.271v7.303H112.74v-5.606a11.528 11.528 0 0 1-1.197-.723h-.005v-.003c-2.899-2.011-4.794-5.345-4.794-9.121v-7.461h.029z"
+            fill="#FFFFFF" data-color="4"></path>
+        </g>
+      </svg>
+      <h1 class="font-semibold my-5 text-center text-base md:text-xl uppercase">Elevate Your
+        Research Future
+      </h1>
+      <p class="text-justify text-sm md:text-center md:text-lg">Looking to develop your research but not sure where to
+        turn? Your research
+        spendings do not match the output? Let us
+        guide you. Any university can move forward with small incremental changes, but building for the future in
+        today’s
+        rapidly evolving environment means taking bold chances and making insightful decisions</p>
+    </div>
+
+  </section>
+
+  <section id="clients" class="pt-16">
+    <h1 data-aos="fade-right"
+      class="p-12 hidden md:block md:absolute font-semibold text-3xl lg:text-5xl text-orange-500">
+      <div class="border lg:border-2 rounded border-white mb-2 w-10"></div>
+      OUR CLIENTS
+    </h1>
+    <div class="md:hidden border lg:border-2 rounded border-neutral-700 mb-2 w-10 m-auto"></div>
+    <h1 data-aos="zoom-out" class="text-center md:hidden text-orange-500 text-3xl font-semibold mb-2">OUR CLIENTS</h1>
+    <video id="" class="" crossorigin="anonymous" playsinline="" preload="auto" muted="" tabindex="-1" autoplay=""
+      src="https://video.wixstatic.com/video/a8b586_0c8b59c6887345568e1c8ed64c9ab21a/1080p/mp4/file.mp4"></video>
+  </section>
+
+  <section id="contact" class="text-white flex flex-col md:flex-row items-center justify-center gap-10 py-28">
+    <div data-aos="fade-right" class="cursor-default">
+      <h1 class="text-3xl lg:text-5xl font-semibold text-orange-500">
+        <div class="border lg:border-2 rounded border-white mb-2 w-10"></div>
+        CONTACT US
+      </h1>
+      <h1 class="font-medium text-lg">Be a social light and follow us.</h1>
+    </div>
+
+    <div data-aos="fade-left" class="cursor-default">
+      <h1 class="font-semibold text-base lg:text-xl">Email : <span class="underline">ceo@redsea-assoc.com</span></h1>
+      <div class="mt-3 cursor-pointer flex gap-3 m-auto">
+        <a href="https://my.linkedin.com/in/redsea-associates-bb52a318a?trk=people_directory"
+          class="hover:opacity-85 transition duration-200">
+          <img
+            src="https://static.wixstatic.com/media/48a2a42b19814efaa824450f23e8a253.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/48a2a42b19814efaa824450f23e8a253.png"
+            alt="LinkedIn">
+        </a>
+        <a href="https://facebook.com" class="hover:opacity-85 transition duration-200">
+          <img
+            src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e316f544f9094143b9eac01f1f19e697.png"
+            alt="Facebook">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="p-5 text-center bg-red-700 text-white">
+    &copy;2024 Red Sea Associates
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("splash-screen").classList.add("show")
+      setTimeout(function () {
+        document.getElementById("splash-screen").classList.add("hide")
+      }, 900)
+    })
+
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar')
+      const scrollPosition = window.scrollY
+      if (scrollPosition > 1) {
+        navbar.classList.add('bg-red-700')
+      } else {
+        navbar.classList.remove('bg-red-700')
+      }
+    })
+
+    function Menu(e) {
+      let list = document.querySelector('ul')
+
+      e.name === 'menu' ?
+        (e.name = "close",
+          list.classList.add('top-[-20px]'),
+          list.classList.add('pt-20'),
+          list.classList.add('transition-all'),
+          list.classList.add('duration-300'),
+          list.classList.add('ease-in-out'),
+          list.classList.add('opacity-100'),
+          list.classList.add('bg-red-700'),
+          document.addEventListener('click', closeMenuOutside)
+        )
+        :
+        (e.name = "menu",
+          list.classList.remove('top-[0px]'),
+          list.classList.remove('pt-20'),
+          list.classList.remove('opacity-100'),
+          list.classList.remove('bg-red-700'),
+          document.addEventListener('click', closeMenuOutside)
+        )
+
+      function closeMenuOutside(event) {
+        if (!navbar.contains(event.target) || event.target !== e) {
+          e.name = "menu"
+          list.classList.remove('top-[0px]')
+          list.classList.remove('opacity-100')
+          list.classList.remove('bg-red-700')
+          document.removeEventListener('click', closeMenuOutside)
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>
